@@ -11,7 +11,7 @@
             while (flag)
             {
                 Console.WriteLine("\nEnter your choice \n1.Add Contacts \n2.View Contacts \n3.Edit Contacts \n4.Delete Contacts " +
-                    "\n5.Add Multiple Person \n6.Exit");
+                    "\n5.Add Multiple Person \n6.Add Multiple AddressBook using Dictionary \n7.Display List of Dictionary \n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -29,6 +29,12 @@
                         break;
                     case 5:
                         addressBookMain.AddMultiplePerson();
+                        break;
+                    case 6:
+                        addressBookMain.CreateDictionary();
+                        break;
+                    case 7:
+                        addressBookMain.DisplayDicttionaryList();
                         break;
                     default:
                         flag = false;
