@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Address Book System!");
+            Contact contact = new Contact();
         }
     }
 }
