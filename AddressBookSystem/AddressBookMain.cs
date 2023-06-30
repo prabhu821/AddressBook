@@ -156,5 +156,17 @@ namespace AddressBookSystem
                 Console.WriteLine("Address Book is empty!");
             }
         }
+
+        //UC5
+        public void AddMultiplePerson()
+        {
+            Console.WriteLine("Please enter number of person to add in Contact");
+            int numberPerson = Convert.ToInt32(Console.ReadLine());
+            while (numberPerson > 0)
+            {
+                AddContact();
+                numberPerson--;
+            }
+        }
     }
 }
