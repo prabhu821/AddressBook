@@ -225,5 +225,52 @@ namespace AddressBookSystem
                 Console.WriteLine("Address book is empty! ");
             }
         }
+
+        //UC8
+        public void SearchPersonByCityOrState()
+        {
+            if (AddressBook.Count > 0)
+            {
+                Console.WriteLine("Select option to search by \n1.Contact In City\n2.Contact In State");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.Write("Enter the City Name : ");
+                        string cityName = Console.ReadLine();
+                        Console.WriteLine("The contact details of {0} are:", cityName);
+                        foreach (var data in AddressBook.FindAll(x => x.City == cityName))
+                        {
+                            Console.WriteLine("First Name :   " + data.FName);
+                            Console.WriteLine("Last Name :    " + data.LName);
+                            Console.WriteLine("Address :      " + data.Address);
+                            Console.WriteLine("State   :      " + data.State);
+                            Console.WriteLine("Zip     :      " + data.Zip);
+                            Console.WriteLine("Phone Number  : " + data.PhoneNumber);
+                            Console.WriteLine("Email  :       " + data.Email);
+                        }
+                        break;
+                    case 2:
+                        Console.Write("Enter the State Name : ");
+                        string stateName = Console.ReadLine();
+                        Console.WriteLine("The contact details of {0} are:", stateName);
+                        foreach (var data in AddressBook.FindAll(x => x.State == stateName))
+                        {
+                            Console.WriteLine("First Name :   " + data.FName);
+                            Console.WriteLine("Last Name :    " + data.LName);
+                            Console.WriteLine("Address :      " + data.Address);
+                            Console.WriteLine("City    :      " + data.City);
+                            Console.WriteLine("Zip     :      " + data.Zip);
+                            Console.WriteLine("Phone Number  : " + data.PhoneNumber);
+                            Console.WriteLine("Email  :       " + data.Email);
+                        }
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Address Book is empty! ");
+            }
+        }
     }
 }
