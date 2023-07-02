@@ -13,7 +13,7 @@
                 Console.WriteLine("\nEnter your choice \n1.Add Contacts \n2.View Contacts \n3.Edit Contacts \n4.Delete Contacts " +
                     "\n5.Add Multiple Person \n6.Add Multiple AddressBook using Dictionary \n7.Display List of Dictionary " +
                     "\n8.Check for Duplicate Contacts \n9.Searc person by city or state \n10.View person by city or state " +
-                    "\n11.Count person by city or state \n12.Exit");
+                    "\n11.Count person by city or state \n12.Sort contacts by name \n13.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -49,6 +49,9 @@
                         break;
                     case 11:
                         addressBookMain.CountPerson();
+                        break;
+                    case 12:
+                        addressBookMain.SortContactByName();
                         break;
                     default:
                         flag = false;
