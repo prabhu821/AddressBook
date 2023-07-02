@@ -352,5 +352,61 @@ namespace AddressBookSystem
                 Console.WriteLine("Address Book is empty.");
             }
         }
+
+        //UC12
+        public void SortContactByCity_State_ZipCode()
+        {
+            if (AddressBook.Count > 0)
+            {
+                Console.WriteLine("Select option to sort by \n1.City \n2.State \n3.Zip");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        foreach (var item in AddressBook.OrderBy(x => x.City))
+                        {
+                            Console.WriteLine("First Name :   " + item.FName);
+                            Console.WriteLine("Last Name :    " + item.LName);
+                            Console.WriteLine("Address :      " + item.Address);
+                            Console.WriteLine("City    :      " + item.City);
+                            Console.WriteLine("State   :      " + item.State);
+                            Console.WriteLine("Zip     :      " + item.Zip);
+                            Console.WriteLine("Phone Number  : " + item.PhoneNumber);
+                            Console.WriteLine("email  :       " + item.Email);
+                        }
+                        break;
+                    case 2:
+                        foreach (var item in AddressBook.OrderBy(x => x.State))
+                        {
+                            Console.WriteLine("First Name :   " + item.FName);
+                            Console.WriteLine("Last Name :    " + item.LName);
+                            Console.WriteLine("Address :      " + item.Address);
+                            Console.WriteLine("City    :      " + item.City);
+                            Console.WriteLine("State   :      " + item.State);
+                            Console.WriteLine("Zip     :      " + item.Zip);
+                            Console.WriteLine("Phone Number  : " + item.PhoneNumber);
+                            Console.WriteLine("email  :       " + item.Email);
+                        }
+                        break;
+                    case 3:
+                        foreach (var item in AddressBook.OrderBy(x => x.Zip))
+                        {
+                            Console.WriteLine("First Name :   " + item.FName);
+                            Console.WriteLine("Last Name :    " + item.LName);
+                            Console.WriteLine("Address :      " + item.Address);
+                            Console.WriteLine("City    :      " + item.City);
+                            Console.WriteLine("State   :      " + item.State);
+                            Console.WriteLine("Zip     :      " + item.Zip);
+                            Console.WriteLine("Phone Number  : " + item.PhoneNumber);
+                            Console.WriteLine("email  :       " + item.Email);
+                        }
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Address Book is empty.");
+            }
+        }
     }
 }
