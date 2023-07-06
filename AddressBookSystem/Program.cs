@@ -16,7 +16,7 @@
                     "\n5.Add Multiple Person \n6.Add Multiple AddressBook using Dictionary \n7.Display List of Dictionary " +
                     "\n8.Check for Duplicate Contacts \n9.Searc person by city or state \n10.View person by city or state " +
                     "\n11.Count person by city or state \n12.Sort contacts by name \n13.Sort entries by city,state or zip code " +
-                    "\n14.File Exit or Not \n15.Read Person File \n16.Write Person File \n17.ExitExit");
+                    "\n14.File Exit or Not \n15.Read Person File \n16.Write Person File \n17.Person Contact as CSV file \n18.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -67,6 +67,9 @@
                         break;
                     case 16:
                         fileIO.WriterPersonsContactsFile(personsContact);
+                        break;
+                    case 17:
+                        PersonsContactsAsCSVFile.ReadCSVWriteCSV();
                         break;
                     default:
                         flag = false;
